@@ -1,13 +1,13 @@
 'use strict';
 
-const oassign = require('object-assign');
-const BrowserWindow = require('browser-window');
+const { BrowserWindow } = require("electron");
+
 
 var PaneBrowserWindow = class PaneBrowserWindow {
 	constructor(opts) {
 		const screen = require('screen').getPrimaryDisplay().bounds;
 
-		opts = oassign({
+		opts = Object.assign({
 			side: 'left',
 			'always-on-top': false
 		}, opts, {
